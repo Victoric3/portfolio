@@ -1,0 +1,328 @@
+:root{
+    --special: rgb(60, 216, 60);
+    --gray: rgb(188, 185, 185);
+    --background: #e6dfd0;
+    --black: #1b1413;
+    --white: white;
+    --lightGray: rgb(238, 235, 235);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'open Sans';
+    background: var(--gray);
+}
+.body{
+    width: 80%;
+    background-color: var(--white);
+    background-image: url(./src/portfolio-background.jpg);
+    background-size: 100% 25rem;
+    background-repeat: no-repeat;
+    margin-left: 50%;
+    margin-top: 60px;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    overflow-x: hidden;
+}
+/* nav bar */
+/* /////////////////////////
+//////////////////////// */
+.nav-bar{
+    display: flex;
+    list-style: none;
+    height: 3rem;
+    align-items: center;
+    z-index: 100;
+    width: 100%;
+}
+
+.nav-bar .sticky{
+    position: fixed;
+}
+.logo{
+    height: 2rem;
+    width: 4rem; 
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+.space{
+    flex-grow: 1;
+}
+li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--white);
+    padding: 1.25rem 2rem;
+    font-size: 1.25rem;
+}
+li a:hover{
+    border-bottom: 1px solid var(--white);
+    color: var(--white);
+}
+li a:active{
+    color: var(--gray);
+}
+/* ////////////////bar icon */
+.bar-icon{
+    display: none;
+    font-size: 35px;
+    padding: 5px 30px 5px 10px;
+}
+.bar-icon:hover{
+    background: var(--gray);
+}
+.bar-icon:active{
+    color: var(--purple);
+}
+/* navbar not responsive ends */
+/* /////////////////
+/////////////////
+//////////////// */
+/*#about me page begins*/
+.me{
+    height: 500px;
+    border: 5px solid var(--white);
+    border-radius: 10px;
+    width: 30%;
+}
+.page-content{
+    display: block;
+    }
+.page-content h1{
+        font-size: 3rem;
+        text-transform: capitalize;
+        color: var(--white);
+        margin-left: 30%;
+        margin-top: 10%;
+    }
+#about{
+        display: flex;
+        margin-top: 17rem;
+        justify-content: center;
+        border-bottom: 1px solid var(--black);
+        padding-bottom: 10%;
+        
+    }
+.greeting{
+        font-weight: bold;
+        font-size: 25px;
+        text-transform: capitalize;
+        color: var(--black);;
+    }
+#about p{
+        width: 300px;
+        padding: 30px;
+        text-align: left;
+        line-height: 30px;
+    } 
+    /*#about me page ends */
+    /* resume begins */
+.resume{
+        height: 950px;
+        width: 65%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5%;
+        border-radius: 5px;
+        padding-bottom: 10%;
+    }
+#resume-container{
+        border-bottom: 1px solid var(--black);
+    }
+    /* my skill page */
+#my-skills{
+    display: flex;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    width: 70%;
+    padding: 2rem;
+    justify-content: center;
+}
+#my-skills:hover{
+    box-shadow: 1px 2px var(--black);
+    border-radius: 1rem;
+}
+.skill{
+    height: 110px;
+    margin-left: 5px;
+}
+
+/* projects done */
+#project{
+    overflow-x: auto;
+}
+caption{
+    text-align: left;
+    font-size: 2rem;
+}
+table{
+    margin-top: 5rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+th{
+    padding: 1rem;
+    font-size: 1.6rem;
+    border-bottom: 1px solid var(--black);
+    font-weight: 100;
+    text-align: left;
+
+}
+td{
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--black);
+}
+td a{
+    text-decoration: none;
+    text-transform: capitalize;
+}
+td a:hover{
+    border-bottom: 2px solid var(--black);
+}
+tr:nth-child(even){
+    background-color: var(--lightGray);
+}
+tr:hover{
+    background-color: var(--special);
+}
+
+/* contact me page */
+#contact{
+    display: flex;
+    justify-content: center;
+    background-image: url(./src/portfolio-background.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: 5rem;
+    padding: 2rem 2rem;
+    align-content: center;
+}
+#contact i{
+    font-size: 2.25rem;
+    padding-left: 1rem;
+    color: var(--white);
+}
+#contact i:hover{
+    font-size: 2.5rem;
+}
+/* reponsiveness */
+@media screen and (max-width: 1300px) {
+    /* to reduce the margin when the screen size reduce */
+    .body{
+        margin-top: 30px;
+        margin-left: 50%;
+        width: 90%;
+        transform: translateX(-50%);
+    }
+}
+/* SECOND media query for screen size 1100px */
+@media screen and (max-width: 1100px) {
+    .body{
+        margin-top: 15px;
+        margin-left: 50%;
+        width: 95%;
+        transform: translateX(-50%);
+    }
+}
+/* for 950px */
+
+@media screen and (max-width: 950px) {
+    /* navbar responsive */
+    .bar-icon{
+        position: absolute;
+        right: 0%;
+        top: 0px;
+        display: block;
+    }
+    .nav-bar{
+        position: relative;
+        display: block;
+        margin-top: 0;
+    }    
+    .nav-bar:hover{
+        box-shadow: none;
+    }
+    .nav-bar li a{
+        display: none;
+        background-color: var(--black);
+        color: var(--white);
+        opacity: 0;
+        margin-left: 0;
+    }
+    .nav-bar li a:hover{
+        background-color: var(--white);
+        color: var(--black);
+        box-shadow: 2px 1px var(--special);
+    }
+    .nav-bar li a:active{
+        color: var(--special);
+
+    }
+    .nav-bar.responsive li a{
+        display: block;
+        align-items: left;
+        transition: opacity 2s ease; 
+        animation-name: link-animation;
+        animation-duration: 3s;
+        opacity: 100%;
+    }
+    .body{
+        margin: 0;
+        width: 100vw;
+        transform: translateX(0);
+    }
+    
+    /* opacity animation */
+    @keyframes link-animation {
+        0% {opacity: 0}
+        50%{opacity: 50}
+        100%{opacity: 100}
+    }
+    /* my picture responsive */
+    .me{
+        width: 40%;
+    }
+    .shifted{
+        margin-top: 18rem;
+        transition: all 1s;
+    }
+}
+@media screen and (max-width: 550px) {
+    /* my picture responsive */
+    .me{
+        height: 450px;
+        width: 50%;
+    }
+    /*#about page responsive */
+    #about p{
+        padding: 3px;
+    }
+    /* #resume responsive */
+    .resume{
+        height: 700px;
+        width: 100%;
+        margin: 0;
+        transform: translateX(0);
+    }
+}
+@media screen and (max-width: 380px) {
+    .skill{
+        height: 40px;
+    }
+}
+
+/* classes to use with javascript */
+
+.current-page{
+    background-color: var(--gray);
+}
+.hidden{
+    display: none;
+}
