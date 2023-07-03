@@ -297,7 +297,7 @@ tr:hover{
 @media screen and (max-width: 550px) {
     /* my picture responsive */
     .me{
-        height: 450px;
+        height: 400px;
         width: 50%;
     }
     /*#about page responsive */
